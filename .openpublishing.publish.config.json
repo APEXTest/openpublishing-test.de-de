@@ -57,8 +57,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op",
-      "template_folder": "_themes.OPS"
+      "build_entry_point": "op"
     },
     {
       "docset_name": "openpublishing-test-starterkit",
@@ -72,7 +71,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
+      "build_entry_point": "op",
       "template_folder": "_themes.OPS"
     },
     {
@@ -87,7 +86,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
+      "build_entry_point": "op",
       "template_folder": "_themes.MSDN.Modern"
     },
     {
@@ -102,7 +101,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
+      "build_entry_point": "op",
       "template_folder": "_themes.TechNet.Modern"
     },
     {
@@ -117,7 +116,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
+      "build_entry_point": "op",
       "template_folder": "_themes.VS.Modern"
     }
   ],
@@ -183,5 +182,6 @@
         "vscom_hotfix_e2e": "hotfix"
       }
     }
-  ]
+  ],
+  "need_generate_pdf_url_template": false
 }
