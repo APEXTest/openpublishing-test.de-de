@@ -3,6 +3,22 @@
   "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
+      "docset_name": "openpublishing-test-azure",
+      "build_source_folder": "openpublishing/azure-docs-pr",
+      "build_output_subfolder": "openpublishing/test/azure",
+      "locale": "de-de",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "is_dynamic_rendering": false
+    },
+    {
       "docset_name": "openpublishing-test-docs",
       "build_source_folder": "openpublishing/test",
       "build_output_subfolder": "openpublishing/test-docs",
@@ -15,7 +31,8 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "is_dynamic_rendering": false
     },
     {
       "docset_name": "openpublishing-test-op",
@@ -29,21 +46,8 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
-    },
-    {
-      "docset_name": "openpublishing-test-op-technet",
-      "build_source_folder": "openpublishing/test",
-      "build_output_subfolder": "openpublishing/test-op-technet",
-      "locale": "de-de",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "op"
+      "build_entry_point": "op",
+      "is_dynamic_rendering": false
     },
     {
       "docset_name": "openpublishing-test-reference",
@@ -57,7 +61,9 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "op",
+      "template_folder": "_themes.OPS",
+      "is_dynamic_rendering": false
     },
     {
       "docset_name": "openpublishing-test-starterkit",
@@ -71,38 +77,9 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "op",
-      "template_folder": "_themes.OPS"
-    },
-    {
-      "docset_name": "openpublishing-test-static-msdn",
-      "build_source_folder": "openpublishing/test",
-      "build_output_subfolder": "openpublishing/test-static-msdn",
-      "locale": "de-de",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "op",
-      "template_folder": "_themes.MSDN.Modern"
-    },
-    {
-      "docset_name": "openpublishing-test-static-technet",
-      "build_source_folder": "openpublishing/test",
-      "build_output_subfolder": "openpublishing/test-static-technet",
-      "locale": "de-de",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "op",
-      "template_folder": "_themes.TechNet.Modern"
+      "build_entry_point": "docs",
+      "template_folder": "_themes.OPS",
+      "is_dynamic_rendering": false
     },
     {
       "docset_name": "openpublishing-test-static-vscom",
@@ -116,8 +93,24 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
+      "build_entry_point": "docs",
+      "template_folder": "_themes.VS.Modern",
+      "is_dynamic_rendering": false
+    },
+    {
+      "docset_name": "openpublishing-test-op-technet",
+      "build_source_folder": "openpublishing/test",
+      "build_output_subfolder": "openpublishing/test",
+      "locale": "de-de",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
       "build_entry_point": "op",
-      "template_folder": "_themes.VS.Modern"
+      "is_dynamic_rendering": false
     }
   ],
   "notification_subscribers": [
@@ -127,6 +120,7 @@
     "live"
   ],
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -152,8 +146,19 @@
       }
     },
     {
+      "path_to_root": "_themes.VS.Modern",
+      "url": "https://github.com/Microsoft/templates.vs.com.de-de",
+      "branch": "master",
+      "branch_mapping": {
+        "master": "develop",
+        "vscom_develop_e2e": "develop",
+        "vscom_release_e2e": "release",
+        "vscom_hotfix_e2e": "hotfix"
+      }
+    },
+    {
       "path_to_root": "_themes.MSDN.Modern",
-      "url": "https://github.com/Microsoft/templates.msdn.msft.de-de",
+      "url": "https://github.com/Microsoft/templates.msdn.msft",
       "branch": "master",
       "branch_mapping": {
         "msdn_develop_e2e": "develop",
@@ -172,16 +177,30 @@
       }
     },
     {
-      "path_to_root": "_themes.VS.Modern",
-      "url": "https://github.com/Microsoft/templates.vs.com.de-de",
-      "branch": "master",
+      "path_to_root": "docfx-seed",
+      "url": "https://github.com/docascode/docfx-seed",
+      "branch": "cli",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master"
+    },
+    {
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/Microsoft/openpublishing-test",
+      "branch": "live",
       "branch_mapping": {
-        "master": "develop",
-        "vscom_develop_e2e": "develop",
-        "vscom_release_e2e": "release",
-        "vscom_hotfix_e2e": "hotfix"
+        "live": "live",
+        "master": "master"
       }
     }
   ],
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  }
 }
