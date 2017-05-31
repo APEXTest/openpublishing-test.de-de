@@ -1,31 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [openpublishing\test\conceptual\small.md](https://github.com/Microsoft/openpublishing-test/blob/2d6aac5144d7fa85213769d4312ea99bfa03328d/openpublishing/test/conceptual/small.md) | HandedOffSuccess | [Details](#7a2f5b43bab914b80eef3c1e33d684cfd9f001c252)
 
 ## Item Details
-##### <a name='7a2f5b43bab914b80eef3c1e33d684cfd9f001c252'></a> Source: [openpublishing\test\conceptual\small.md](https://github.com/Microsoft/openpublishing-test/blob/2d6aac5144d7fa85213769d4312ea99bfa03328d/openpublishing/test/conceptual/small.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [small.7784cb202c2cbbbca6538cb14d51a50e91054011.de-de.xlf](https://github.com/openpublish/openpublishing-handoff-test/blob/bd6bf6663ab506da1fb65867e1d4df4e4d368262/ol-handoff/openpublish/openpublishing-test.de-de/master/small.7784cb202c2cbbbca6538cb14d51a50e91054011.de-de.xlf)
-* Handoff Datetime: 2017-05-31 11:15:35
-* Handoff Reason: Include
-* Handoff Name: 
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Handback Name: 
-* Current Target File: [openpublishing\test\conceptual\small.md](https://github.com/openpublish/openpublishing-test.de-de/blob/bc8995617c53cb85b3155daeebc3bbfd605971ca/openpublishing/test/conceptual/small.md)
-* Current Handback File: [small.7784cb202c2cbbbca6538cb14d51a50e91054011.de-de.xlf](https://github.com/openpublish/openpublishing-handback-test/blob/8c0ad9cace8e03e2f010e7aebba768d8040d98c7/ol-handback/openpublish/openpublishing-test.de-de/master/small.7784cb202c2cbbbca6538cb14d51a50e91054011.de-de.xlf)
-* Current Handback Datetime: 2016-06-21 17:49:24
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
